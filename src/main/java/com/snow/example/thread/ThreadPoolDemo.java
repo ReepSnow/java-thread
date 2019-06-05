@@ -28,7 +28,7 @@ public class ThreadPoolDemo {
      * @param args
      */
     public static void main(String[] args) {
-        testSubmitFuture();
+        testExecute();
     }
 
     /**
@@ -62,14 +62,14 @@ public class ThreadPoolDemo {
         executorService.shutdown();
     }
     /**
-     * 测试submit,该方法发生异常，会抛出来
+     * 测试execute,该方法发生异常，会抛出来
      */
     public static void testExecute(){
         ExecutorService executorService = Executors.newFixedThreadPool(4);
 
         for (int i = 0; i < 5; i++) {
             int index = i;
-            executorService.submit(() -> divTask(100, index));
+            executorService.execute(() -> divTask(100, index));
         }
         executorService.shutdown();
     }

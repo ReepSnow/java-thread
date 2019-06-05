@@ -11,6 +11,6 @@ public class App
         ThreadLocal<Object> threadLocal1 = new ThreadLocal<>();
         ThreadLocal<Object> threadLocal2 = new ThreadLocal<>();
         threadLocal1.set(1);
-        System.out.println( "Hello World!" );
+        System.out.println( 111*10/100);
     }
 }
